@@ -1,0 +1,18 @@
+---
+galaxy_info:
+  author: APPUiO Team
+  description: Role configuring HAPRoxy IPv6 support
+  company: Puzzle ITC and VSHN
+  license: Apache License, Version 2.0
+  min_ansible_version: 2.2
+  platforms:
+  - name: EL
+    versions:
+    - 7
+  categories:
+  - cloud
+dependencies:
+- src: git+https://github.com/appuio/ansible-role-openshift-haproxy
+  version: v1.0.0
+  prestart_scripts:
+    patch-ipv6.sh: "{{ lookup('file', 'files/patch-ipv6.sh') }}"
