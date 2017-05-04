@@ -32,7 +32,7 @@ Example Usage
 `playbook.yml`:
 
     roles:
-    - role: ../ansible-role-openshift-haproxy-ipv6
+    - role: ansible-role-openshift-haproxy-ipv6
       routers:
       - ha-router-ex1
 
